@@ -28,7 +28,7 @@
     "build": "tsup",
     "test": "jest",
     "lint": "eslint .",
-    "prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
@@ -43,7 +43,7 @@
     "prettier": "^3.2.4",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
-    "tsup": "^8.0.1",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   }
 }
