@@ -1948,7 +1948,13 @@ var splitVIN = (vin) => {
   };
 };
 var manufacturersList = () => {
-  return manufacturers;
+  const manufacturersArray = [];
+  Object.entries(manufacturers).forEach(([key, value]) => {
+    if (!manufacturersArray.includes(value)) {
+      manufacturersArray.push(value);
+    }
+  });
+  return manufacturersArray;
 };
 var decodeVIN = (vin) => {
   vin = vin.toUpperCase();
