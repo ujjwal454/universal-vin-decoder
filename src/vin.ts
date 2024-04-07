@@ -1,6 +1,7 @@
 import { getCountry, getRegion } from './country-region';
 import { getManufacturer } from './manufacturer';
 import { getModelYear } from './year';
+import { manufacturers } from './constants';
 
 export interface VINInfo {
   // ISO-3779
@@ -63,6 +64,11 @@ export const splitVIN = (vin: string): VINInfo => {
     modelYear: vin.substring(9, 10),
   };
 };
+
+
+export const manufacturersList = ()=>{
+  return manufacturers
+}
 
 export const decodeVIN = (vin: string): VINDecoded => {
   vin = vin.toUpperCase();
