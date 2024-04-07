@@ -67,7 +67,13 @@ export const splitVIN = (vin: string): VINInfo => {
 
 
 export const manufacturersList = ()=>{
-  return manufacturers
+  const manufacturersArray:any = [];
+  Object.entries(manufacturers).forEach(([key, value]) => {
+    if (!manufacturersArray.includes(value)) {
+      manufacturersArray.push(value);
+    }
+  });
+  return manufacturersArray
 }
 
 export const decodeVIN = (vin: string): VINDecoded => {
